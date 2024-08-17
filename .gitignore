@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BookStoreAPI/obj
+/BookStoreAPI.Test/bin/Debug/net7.0
+/BookStoreAPI.Test/obj
+.vs/BookStoreAPI/FileContentIndex/17719b9c-481f-44a3-89a0-1db6d7c148da.vsidx
