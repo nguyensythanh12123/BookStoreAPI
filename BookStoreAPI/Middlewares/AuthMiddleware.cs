@@ -11,11 +11,11 @@
 
         public async Task InvokeAsync(HttpContext context)
         {
-            //if (!context.Request.Headers.ContainsKey("xAuth") || string.IsNullOrWhiteSpace(context.Request.Headers["xAuth"]))
-            //{
-            //    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-            //    return;
-            //}
+            if (!context.Request.Headers.ContainsKey("xAuth") || string.IsNullOrWhiteSpace(context.Request.Headers["xAuth"]))
+            {
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                return;
+            }
 
             await _next(context);
         }
